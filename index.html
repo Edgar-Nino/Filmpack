@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
@@ -32,9 +32,9 @@
   <nav id="header" class="fixed w-full z-50 top-0 text-white">
     <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
       <div class="pl-4 flex items-center">
-        <img class="h-20 max-w-full" src="img/LOGO.png">
+        <img class="md:h-36 h-28 max-w-full" src="img/logo.png">
       </div>
-      <div class="block xl:hidden pr-4">
+      <div class="block 2xl:hidden pr-4">
         <button id="nav-toggle"
           class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
           <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -44,53 +44,67 @@
         </button>
       </div>
       <div
-        class="w-full flex-grow xl:flex xl:items-center xl:w-auto hidden mt-2 xl:mt-0 bg-white xl:bg-transparent text-black p-4 xl:p-0"
+        class="w-full flex-grow 2xl:flex 2xl:items-center 2xl:w-auto hidden mt-2 2xl:mt-0 bg-white 2xl:bg-transparent text-black p-4 2xl:p-0"
         id="nav-content">
-        <ul class="list-reset xl:flex justify-end flex-1 items-center">
+        <ul class="list-reset 2xl:flex justify-end flex-1 items-center">
           <li class="mr-3">
-            <a class="toggleColourList inline-block py-2 px-4 text-white font-bold no-underline"
+            <a data-i18n-key="header-inicio"
+              class="toggleColourList inline-block py-2 px-2 text-white font-bold no-underline"
               href="#inicio">INICIO</a>
           </li>
           <li class="mr-3">
-            <a class="toggleColourList inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+            <a data-i18n-key="header-productos"
+              class="toggleColourList text-lg inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-2"
               href="#productos">PRODUCTOS</a>
           </li>
           <li class="mr-3">
-            <a class="toggleColourList inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+            <a data-i18n-key="header-videos"
+              class="toggleColourList text-lg inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-2"
+              href="#videos">VIDEOS</a>
+          </li>
+          <li class="mr-3">
+            <a data-i18n-key="header-fichas"
+              class="toggleColourList text-lg inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-2"
               href="#fichas">FICHAS TÉCNICAS</a>
           </li>
           <li class="mr-3">
-            <a class="toggleColourList inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+            <a data-i18n-key="header-nosotros"
+              class="toggleColourList text-lg inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-2"
               href="#nosotros">NOSOTROS</a>
           </li>
           <li class="mr-3">
-            <a class="toggleColourList inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+            <a data-i18n-key="header-ubicacion"
+              class="toggleColourList text-lg inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-2"
               href="#ubicacion">UBICACIÓN</a>
           </li>
         </ul>
         <a href="#contacto" class="">
-          <button id="navAction"
+          <button data-i18n-key="header-contacto" id="navAction"
             class="mx-auto xl:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 xl:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
             CONTÁCTANOS
           </button>
         </a>
+        <select data-i18n-switcher
+          class="locale-switcher mx-2 2xl:mx-6 my-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+        </select>
       </div>
     </div>
     <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
   </nav>
   <div id="inicio" class="pt-0">
-    <div class="container px-3 mx-auto flex -mb-12 pt-24 md:pt-36 flex-wrap flex-col md:flex-row items-center">
+    <div class="container px-3 mx-auto flex md:pt-24 pt-48 md:pt-48 flex-wrap flex-col md:flex-row items-center">
       <div
         class="flex flex-col w-full md:w-2/5 justify-center items-start text-center blue md:text-left p-12 rounded-xl shadow-2xl">
-        <p class="uppercase tracking-loose w-full">¿En que podemos ayudarte?</p>
-        <h1 class="my-4 text-2xl lg:text-5xl md:text-3xl font-bold leading-tight">
+        <h1 data-i18n-key="inicio-subtitulo" class="my-4 text-2xl lg:text-5xl md:text-3xl font-bold leading-tight">
           En FILMPACK, valoramos su negocio
         </h1>
-        <p class="leading-normal text-2xl mb-8">
+        <p data-i18n-key="inicio-descripcion" class="leading-normal text-2xl mb-8">
           Nuestra misión es ofrecer productos y servicios confiables con un enfoque orientado al cliente.
         </p>
         <a href="#contacto">
-          <button
+          <button data-i18n-key="inicio-contacto"
             class="mx-auto xl:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-xl focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
             ¡Contáctanos!
           </button>
@@ -126,18 +140,22 @@
     <div class="container max-w-5xl mx-auto m-8">
       <div class="flex flex-wrap align-center justify-center">
         <div class="w-5/6 sm:w-1/2 p-6">
-          <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-            Servicio al cliente excepcional
+          <h3 data-i18n-key="inicio-primer-titulo" class="text-3xl text-gray-800 font-bold leading-none mb-3">
+            Productos y servicios (Nacionales y Extranjeros)
           </h3>
-          <p class="text-gray-600 mb-8">
-            En FILMPACK, nuestro objetivo principal es brindar un servicio al cliente excepcional. Valoramos a nuestros
-            clientes y nos esforzamos por ofrecerles una experiencia cordial y satisfactoria. Nuestro equipo atento y
-            profesional está capacitado para brindarles el mejor servicio posible. Desde el momento en que nos contacta
-            hasta la entrega final de nuestros productos y servicios, nos aseguramos de que su experiencia sea agradable
-            y satisfactoria. Nos comprometemos a escuchar sus necesidades y adaptar nuestros servicios para cumplir con
-            sus requisitos específicos.
-            <br />
-            <br />
+          <p data-i18n-key="inicio-primer-descripcion" class="text-gray-600 mb-8">
+            Valoramos profundamente a nuestros clientes y nos esforzamos por ofrecerles una experiencia cordial y
+            satisfactoria.
+            Nuestra coextrusión para empaque de alta barrera para la industria alimenticia:
+            Los diferentes alimentos tienen un empaque hecho a la medida, en donde las características del mercado deben
+            permitir una imagen del producto, de protección, de calidad y de frescura, permitiendo una mayor vida de
+            anaquel.
+            Todo esto se puede obtener con un empaque de alta barrera que permite el empacado al alto vacío y
+            termoformado, esto solo se obtiene si la película tiene varias capas, para poder cumplir con todos los
+            requerimientos de la industria.
+            También ofrecemos empaque termo encogible para industria láctea, como quesos.
+            Nuestro equipo altamente capacitado y profesional está dedicado a escuchar sus necesidades y adaptar
+            nuestros servicios para cumplir con sus requisitos específicos.
           </p>
         </div>
         <div class="w-full sm:w-1/2 p-6">
@@ -148,20 +166,19 @@
         <div class="w-1-2 sm:w-1/2 p-6">
           <img class="rounded-md" src="img/roll_6.jpg" alt="" height="100%" />
         </div>
-        <div class="w-full sm:w-1/2 p-6 mt-6">
+        <div class="w-full sm:w-1/2 p-6">
           <div class="align-middle">
-            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-              Productos y servicios confiables
+            <h3 data-i18n-key="inicio-segundo-titulo" class="text-3xl text-gray-800 font-bold leading-none mb-3">
+              Servicio al cliente excepcional
             </h3>
-            <p class="text-gray-600 mb-8">
-              En FILMPACK, nos enorgullece ofrecer productos y servicios confiables a nuestros clientes. Nuestra misión
-              es garantizar su satisfacción al proporcionar soluciones que cumplan con altos estándares de calidad.
-              Trabajamos con equipos de última generación y empleamos técnicas innovadoras para asegurarnos de que cada
-              proyecto sea entregado con excelencia. Nuestro equipo está capacitado y listo para brindarle resultados de
-              calidad.
-              Puede confiar en nosotros para cumplir con sus expectativas y entregar un trabajo que destaque.
-              <br />
-              <br />
+            <p data-i18n-key="inicio-segundo-descripcion" class="text-gray-600 mb-8">
+              Nos enorgullece ser reconocidos por ofrecer a nuestros valiosos clientes nacionales e internacionales
+              productos y servicios confiables, todas nuestras materias primas están autorizadas por la FDA (Food and
+              Drug Administration) de los EUA y 100% vírgenes libres de todo reciclaje.
+              Nuestra garantía es consistente con las regulaciones 54 CFR 7.12 y 7.13 de la FDA de los EUA, y cumplimos
+              con todas las normas vigentes para el empaque al vacío de todo tipo de alimentos (cárnicos, lácteos,
+              naturales y/o preparados) particularmente las normas de Food Safety and Inspection Service (FSIS) así como
+              todas las regulaciones aplicables sobre aditivos plásticos para el consumo humano
             </p>
           </div>
         </div>
@@ -170,14 +187,16 @@
   </section>
   <section id="productos" class="section bg-white border-b py-8">
     <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
-      <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+      <h2 data-i18n-key="productos-titulo"
+        class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
         Productos
       </h2>
       <div class="w-full mb-4">
         <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
       </div>
       <div class="w-full mb-4">
-        <p class="text-black text-lg py-2">Ofrecemos servicios de impresión de bolsas en un rango de 30,000 a 50,000
+        <p data-i18n-key="productos-descripcion" class="text-black text-lg py-2">Ofrecemos servicios de impresión de
+          bolsas en un rango de 30,000 a 50,000
           unidades. Nuestro
           proceso de impresión utiliza hasta 6 tintas y ofrecemos medidas máximas que van desde 3"x4" hasta
           20"x36". Además, puedes elegir entre diferentes calibres, que van desde 3.0 milesimas hasta 9.0
@@ -220,7 +239,8 @@
               <img src="img/bag_7.jpg"
                 class="img-view absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
-            <div id="carousel-item-8" data-product="plateado" class="hidden duration-700 ease-in-out" data-carousel-item>
+            <div id="carousel-item-8" data-product="plateado" class="hidden duration-700 ease-in-out"
+              data-carousel-item>
               <img src="img/bag_8.jpg"
                 class="img-view absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
@@ -296,9 +316,9 @@
         <div>
           <p id="display-text" class="text-black font-bold text-center pt-4"></p>
           <div>
-            <p id="medidas-text" class="py-4 text-black font-bold text-center text-xl">Medidas</p>
+            <p data-i18n-key="productos-barra-tabla-medidas" id="medidas-text"
+              class="py-4 text-black font-bold text-center text-xl">Medidas</p>
             <div id="medidas-list" class="container mx-auto flex items-center flex-wrap">
-
             </div>
           </div>
         </div>
@@ -308,85 +328,84 @@
           <div class="w-full p-4 text-2xl font-bold text-center"></div>
           <ul class="w-full text-center text-base">
             <li class="border-b px-8 py-4">
-              <h3 class="font-bold text-xl">Manejamos distintos tipos de productos</h3>
+              <h3 data-i18n-key="productos-barra-titulo" class="font-bold text-xl">Manejamos distintos tipos de
+                productos</h3>
               <ul class="pl-5 list-disc">
                 <li class="text-left">
-                  <p>Bolsas (Se puede añadir impresión)</p>
+                  <p data-i18n-key="productos-barra-bolsas">Bolsas (Se puede añadir impresión)</p>
                   <ul class="pl-5 mt-2 space-y-1 list-disc list-inside">
-                    <li class="text-left">Fondo</li>
-                    <li class="text-left">Pouch</li>
-                    <li class="text-left">Zipper</li>
-                    <li class="text-left">Perforacion</li>
+                    <li data-i18n-key="productos-barra-fondo" class="text-left">Fondo</li>
+                    <li data-i18n-key="productos-barra-pouch" class="text-left">Pouch</li>
+                    <li data-i18n-key="productos-barra-zipper" class="text-left">Zipper</li>
+                    <li data-i18n-key="productos-barra-perforacion" class="text-left">Perforacion</li>
+                    <li data-i18n-key="productos-barra-rollos" class="text-left">Rollos</li>
                   </ul>
-                </li>
-                <li class="text-left">
-                  Rollos
                 </li>
               </ul>
             </li>
             <li class="border-b px-8 py-4">
-              <p class="pb-5 font-bold text-lg">Sin impresión</p>
+              <p data-i18n-key="productos-barra-tabla-sinimpresion" class="pb-5 font-bold text-lg">Sin impresión</p>
               <table class="table-fixed w-full">
                 <thead>
-                  <tr class="border">
-                    <th>Medidas</th>
-                    <th class="border-l">Precio x Millar ($USD)</th>
+                  <tr class="">
+                    <th data-i18n-key="productos-barra-tabla-medidas">Medidas</th>
+                    <th data-i18n-key="productos-barra-tabla-precio" class="">Precio x Millar ($USD)</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="border">
+                  <tr class="">
                     <td>6x8</td>
-                    <td class="border-l">$71</td>
+                    <td class="">$71</td>
                   </tr>
-                  <tr class="border">
+                  <tr class="">
                     <td>7x9</td>
-                    <td class="border-l">$94</td>
+                    <td class="">$94</td>
                   </tr>
-                  <tr class="border">
+                  <tr class="">
                     <td>8x12</td>
-                    <td class="border-l">$142</td>
+                    <td class="">$142</td>
                   </tr>
-                  <tr class="border">
+                  <tr class="">
                     <td>10x16</td>
-                    <td class="border-l">$238</td>
+                    <td class="">$238</td>
                   </tr>
-                  <tr class="border">
+                  <tr class="">
                     <td>10x12</td>
-                    <td class="border-l">$178</td>
+                    <td class="">$178</td>
                   </tr>
                 </tbody>
               </table>
             </li>
             <li class="border-b w-full px-8 py-4">
-              <p class="pb-5 font-bold text-lg">Con zipper</p>
+              <p data-i18n-key="productos-barra-tabla-zipper" class="pb-5 font-bold text-lg">Con zipper</p>
               <table class="table-fixed w-full">
                 <thead>
-                  <tr class="border">
-                    <th>Medidas</th>
-                    <th class="border-l">Precio x Millar ($USD)</th>
+                  <tr class="">
+                    <th data-i18n-key="productos-barra-tabla-medidas">Medidas</th>
+                    <th data-i18n-key="productos-barra-tabla-precio" class="">Precio x Millar ($USD)</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="border">
+                  <tr class="">
                     <td>6x8</td>
-                    <td class="border-l">$80</td>
+                    <td class="">$80</td>
                   </tr>
-                  <tr class="border">
+                  <tr class="">
                     <td>8x12</td>
-                    <td class="border-l">$160</td>
+                    <td class="">$160</td>
                   </tr>
-                  <tr class="border">
+                  <tr class="">
                     <td>10x12</td>
-                    <td class="border-l">$200</td>
+                    <td class="">$200</td>
                   </tr>
                 </tbody>
               </table>
             </li>
             <li class="border-b px-8 py-4">
-              <p class="">Si tienes alguna inquietud, no
+              <p data-i18n-key="productos-barra-inquietud" class="">Si tienes alguna inquietud, no
                 dudes en ponerte en contacto con nosotros.</p>
               <a href="#contacto" class="">
-                <button id="navAction"
+                <button data-i18n-key="productos-barra-tabla-contacto" id="navAction"
                   class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                   CONTÁCTANOS
                 </button>
@@ -397,25 +416,52 @@
       </div>
     </div>
   </section>
+  <section id="videos" class="section bg-white border-b py-8">
+    <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+      <h2 data-i18n-key="videos-titulo" class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        Videos
+      </h2>
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+      <div class="w-full 2xl:w-7/12 w-full p-6 flex flex-col flex-grow flex-shrink">
+        <div class="flex justify-start items-center flex-col">
+          <video class="w-full" controls muted style="max-height:36rem;min-height:36rem;" preload="true" loop="false" autoplay="false" poster="">
+            <source src="img/video_2.mp4">
+          </video>
+          <p class="text-black text-xl font-bold" data-i18n-key="videos-video-1">Proceso de nuestra bolsa al vacío</p>
+        </div>
+      </div>
+      <div class="w-full 2xl:w-2/12 p-6 flex flex-col flex-grow flex-shrink">
+        <div class="flex justify-start items-center flex-col">
+          <video class="w-full" controls muted style="max-height:36rem;min-height:36rem;" preload="true" loop="false" autoplay="false" poster="">
+            <source src="img/video_1.mp4">
+          </video>
+          <p class="text-black text-xl font-bold" data-i18n-key="videos-video-2">Material termo formado</p>
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="fichas" class="section bg-white border-b py-8">
     <div class="container mx-auto flex flex-wrap pt-4 pb-12">
-      <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+      <h2 data-i18n-key="fichas-titulo" class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
         Fichas Técnicas
       </h2>
       <div class="w-full mb-4">
         <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
       </div>
-      <div class="w-full md:w-2/5 p-6 flex flex-col flex-grow flex-shrink">
-        <img class="img-responsive img-view" src="img/Producto_1.png">
-      </div>
       <div class="w-full md:w-3/5 p-6 flex flex-col flex-grow flex-shrink">
-        <img class="img-responsive img-view" src="img/Producto_2.png">
+        <img id="ficha-1-img" class="img-responsive img-view" src="img/producto_1.jpg">
+      </div>
+      <div class="w-full md:w-2/5 p-6 flex flex-col flex-grow flex-shrink">
+        <img id="ficha-2-img" class="img-responsive img-view" src="img/producto_2.jpg">
       </div>
     </div>
   </section>
   <section id="nosotros" class="section bg-white border-b py-8">
     <div class="container mx-auto flex flex-wrap pt-4 pb-12">
-      <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+      <h2 data-i18n-key="nosotros-titulo"
+        class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
         Nosotros
       </h2>
       <div class="w-full mb-4">
@@ -424,10 +470,10 @@
       <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
           <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-            <div class="w-full font-bold text-xl text-gray-800 px-6">
+            <div data-i18n-key="nosotros-mision-titulo" class="w-full font-bold text-xl text-gray-800 px-6">
               Misión
             </div>
-            <p class="text-gray-800 text-base px-6 mb-5">
+            <p data-i18n-key="nosotros-mision-descripcion" class="text-gray-800 text-base px-6 mb-5">
               Somos una organización cuyo propósito principal es satisfacer a nuestros clientes, suministrándoles
               productos de excelente calidad, con entregas oportunas a precios competitivos.
               Buscamos la mejora continua de nuestro proceso, personal y accionistas para que mediante el trabajo en
@@ -439,10 +485,10 @@
       <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
           <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-            <div class="w-full font-bold text-xl text-gray-800 px-6">
+            <div data-i18n-key="nosotros-vision-titulo" class="w-full font-bold text-xl text-gray-800 px-6">
               Visión
             </div>
-            <p class="text-gray-800 text-base px-6 mb-5">
+            <p data-i18n-key="nosotros-vision-descripcion" class="text-gray-800 text-base px-6 mb-5">
               Tener un crecimiento en el mercado de fabricar y suministrar a nuestros clientes Productos de manera
               rentable por medio de la mejora continua de nuestros procesos y el desarrollo de nuestro personal
               asegurando su competencia con altos estándares de calidad.
@@ -453,10 +499,10 @@
       <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
           <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-            <div class="w-full font-bold text-xl text-gray-800 px-6">
+            <div data-i18n-key="nosotros-politica-titulo" class="w-full font-bold text-xl text-gray-800 px-6">
               Política de Calidad
             </div>
-            <p class="text-gray-800 text-base px-6 mb-5">
+            <p data-i18n-key="nosotros-politica-descripcion" class="text-gray-800 text-base px-6 mb-5">
               En FILMPACK estamos comprometidos a fabricar y suministrar a nuestros clientes productos que cumplan sus
               necesidades actuales y futuras, conforme a las reglamentaciones pertinentes; apoyados en la capacidad de
               nuestra gente, sistema de gestión de calidad, procesos flexibles y mejora continua.
@@ -466,20 +512,24 @@
       </div>
       <div class="w-full text-gray-800 p-6 flex flex-col flex-grow flex-shrink">
         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-          <div class="w-full p-4 text-xl font-bold text-center">Valores</div>
+          <div data-i18n-key="nosotros-valores-titulo" class="w-full p-4 text-xl font-bold text-center">Valores</div>
           <ul class="w-full text-center text-base">
-            <li class="border-b px-8 py-4"><span class="font-bold">Enfoque al Cliente</span>:
+            <li data-i18n-key="nosotros-valores-enfoque" class="border-b px-8 py-4"><span class="font-bold">Enfoque al
+                Cliente</span>:
               Somos una empresa cuyo actuar esta siempre enfocado a nuestros Clientes y a su total satisfacción, en este
               valor basamos el Sistema de Gestión de Calidad.
             </li>
-            <li class="border-b px-8 py-4"><span class="font-bold">Trabajo en equipo</span>:
+            <li data-i18n-key="nosotros-valores-trabajo" class="border-b px-8 py-4"><span class="font-bold">Trabajo en
+                equipo</span>:
               Los resultados de la empresa provienen de la participación y aportación de cada uno de sus integrantes,
               que de manera coordinada se enlazan para lograr objetivos comunes.
             </li>
-            <li class="border-b px-8 py-4"><span class="font-bold">Calidad</span>:
+            <li data-i18n-key="nosotros-valores-calidad" class="border-b px-8 py-4"><span
+                class="font-bold">Calidad</span>:
               Cumplir siempre con los requisitos y especificaciones de nuestros Clientes relacionados con el Producto.
             </li>
-            <li class="border-b px-8 py-4"><span class="font-bold">Confianza</span>:
+            <li data-i18n-key="nosotros-valores-confianza" class="border-b px-8 py-4"><span
+                class="font-bold">Confianza</span>:
               Mantendremos la confianza de nuestros Clientes, Proveedores y Compañeros de Trabajo atreves de actuar ante
               cualquier situación con: Honestidad, Rectitud, Honradez, Integridad, Ética, Respeto y Lealtad
             </li>
@@ -490,7 +540,8 @@
   </section>
   <section id="ubicacion" class="section bg-gray-100 py-8 scroll-mt-5">
     <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
-      <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+      <h2 data-i18n-key="ubicacion-titulo"
+        class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
         Ubicación
       </h2>
       <div class="w-full mb-4">
@@ -532,13 +583,14 @@
     </g>
   </svg>
   <section id="contacto" class="section container mx-auto text-center py-6 mb-12">
-    <h2 class="w-full my-2 text-2xl md:text-5xl font-bold leading-tight text-center text-white">
+    <h2 data-i18n-key="contacto-titulo"
+      class="w-full my-2 text-2xl md:text-5xl font-bold leading-tight text-center text-white">
       ¡Contáctanos!
     </h2>
     <div class="w-full mb-4">
       <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
     </div>
-    <h3 class="my-4 text-3xl leading-tight">
+    <h3 data-i18n-key="contacto-llamada" class="my-4 text-3xl leading-tight">
       Para obtener más información acerca de FILMPACK, y los productos y servicios que podemos ofrecer, llámenos al:
     </h3>
     <a href="tel:528183261533">
@@ -553,17 +605,17 @@
         +52-818-3261653
       </button>
     </a>
-    <h3 class="my-4 text-3xl leading-tight">
+    <h3 data-i18n-key="contacto-email" class="my-4 text-3xl leading-tight">
       O contáctenos mediante las siguientes direcciones de correo electrónico:</h3>
     <a href="mailto: sperez@filmpack.com.mx">
       <button
-        class="mx-auto lg:mx-3 text-2xl hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+        class="mx-auto lg:mx-3 text-md md:text-2xl hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
         sperez@filmpack.com.mx
       </button>
     </a>
     <a href="mailto: cgarcia@filmpack.com.mx">
       <button
-        class="mx-auto lg:mx-3 text-2xl hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+        class="mx-auto lg:mx-3 text-md md:text-2xl hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
         cgarcia@filmpack.com.mx
       </button>
     </a>
@@ -572,7 +624,7 @@
     <div class="container mx-auto px-8">
       <div class="w-full flex flex-col md:flex-row py-6">
         <div class="flex-1 text-black">
-          <img class="h-20 max-w-full" src="img/LOGO.png">
+          <img class="h-20 max-w-full" src="img/logo.png">
         </div>
       </div>
     </div>
@@ -705,30 +757,95 @@
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
   <script>
+    const defaultLocale = "es";
+    let localeJSON
+    const supportedLocales = ["es", "en"];
+    let locale;
+    let translations = {};
+    document.addEventListener("DOMContentLoaded", () => {
+      const initialLocale = supportedOrDefault(browserLocales(true));
+      setLocale(initialLocale);
+      bindLocaleSwitcher(initialLocale);
+    });
+
+    function isSupported(locale) {
+      return supportedLocales.indexOf(locale) > -1;
+    }
+
+    function supportedOrDefault(locales) {
+      return locales.find(isSupported) || defaultLocale;
+    }
+
+    function bindLocaleSwitcher(initialValue) {
+      const switcher =
+        document.querySelector("[data-i18n-switcher]");
+      switcher.value = initialValue;
+      switcher.onchange = (e) => {
+        // Set the locale to the selected option[value]
+        setLocale(e.target.value);
+      };
+    }
+
+    function browserLocales(languageCodeOnly = false) {
+      return navigator.languages.map((locale) =>
+        languageCodeOnly ? locale.split("-")[0] : locale,
+      );
+    }
+
+    async function setLocale(newLocale) {
+      if (newLocale === locale && !force) return;
+      const newTranslations =
+        await fetchTranslationsFor(newLocale);
+      locale = newLocale;
+      translations = newTranslations;
+      translatePage();
+      changeImg()
+    }
+    async function fetchTranslationsFor(newLocale) {
+      const response = await fetch(`/localization/${newLocale}.json`);
+      return await response.json();
+    }
+    function translatePage() {
+      document
+        .querySelectorAll("[data-i18n-key]")
+        .forEach(translateElement);
+    }
+    function translateElement(element) {
+      const key = element.getAttribute("data-i18n-key");
+      const translation = translations[key];
+      element.innerHTML = translation;
+    }
+    function changeImg() {
+      document.getElementById("ficha-1-img").src = locale === 'en' ? 'img/producto_1_english.jpg' : 'img/producto_1.jpg'
+      document.getElementById("ficha-2-img").src = locale === 'en' ? 'img/producto_2_english.jpg' : 'img/producto_2.jpg'
+    }
+  </script>
+  <script>
     const bags = {
       impresa: {
-        text: 'BOLSA IMPRESA POUCH, ZIPPER, PERFORACION Y ABRE FACIL',
-        measures: ['4x6', '5.5x7', '6.5x8.5', '8x9']
+        measures: ['4x6', '5.5x7', '6.5x8.5', '8x9'],
+        key: 'bolsa-impresa-facil'
       },
       zipper: {
-        text: 'BOLSA POUCH, ZIPPER, PERFORACION Y ABRE FACIL',
-        measures: ['5x8', '6x7', '6x8', '6x10', '8x10', '8x12', '10x14']
+        measures: ['5x8', '6x7', '6x8', '6x10', '8x10', '8x12', '10x14'],
+        key: 'bolsa-pouch-facil'
       },
       pouch: {
-        text: 'BOLSA IMPRESA, POUCH Y SELLO FONDO ',
-        measures: ['8x10', '8x11', '12x16', '11x18', '8x20', '10x20', '12x16', '12x14', '14x18', '16.5x24', '20x35', '20x36',]
+        measures: ['8x10', '8x11', '12x16', '11x18', '8x20', '10x20', '12x16', '12x14', '14x18', '16.5x24', '20x35', '20x36',],
+        key: 'bolsa-impresa'
       },
       negro: {
-        text: 'BOLSA POUCH PIGMENTO NEGRO TRANSPARENTE ',
-        measures: ['8x10', '8x12', '10x12', '12x16', '14x16']
+        measures: ['8x10', '8x12', '10x12', '12x16', '14x16'],
+        key: 'bolsa-pigmento-negro'
       },
       plateado: {
-        text: 'BOLSA POUCH PIGMENTO PLATEADO TRANSPARENTE ',
-        measures: ['6x8', '8x10', '8x9', '8x12']
+        measures: ['6x8', '8x10', '8x9', '8x12'],
+        key: 'bolsa-pigmento-plateado'
       },
       blank: {
         text: '',
-        measures: []
+        measures: [],
+        key: ''
       }
     }
 
@@ -850,24 +967,19 @@
       onChange: (e) => {
         a = e._activeItem.el;
         attr = a.getAttribute('data-product')
-        console.log(attr)
-        dt.innerHTML = bags[attr].text
+        // console.log(attr)
+        dt.innerHTML = translations[bags[attr].key]
+        dt.setAttribute('data-i18n-key', bags[attr].key)
+
         list = document.getElementById('medidas-list')
-        if (attr == 'blank') {
-          document.getElementById('medidas-text').innerHTML = ''
-          list.innerHTML = ''
-        } else {
-          document.getElementById('medidas-text').innerHTML = 'Medidas'
-        }
         list.innerHTML = ""
         bags[attr].measures.forEach((v, i) => {
-          console.log(v)
+          // console.log(v)
           const box = document.createElement("div");
           box.innerHTML = v;
-          box.classList.add("text-black","text-center","border","border-black","w-1/3");
+          box.classList.add("text-black", "text-center", "border", "border-black", "w-1/3");
           list.appendChild(box)
         })
-
       }
     };
     const carousel = new Carousel(items, options);
